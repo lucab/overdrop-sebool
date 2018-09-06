@@ -1,0 +1,18 @@
+[package]
+name = "overdrop-sebool"
+version = "0.0.1-dev"
+authors = [ "Luca Bruno <luca.bruno@coreos.com>" ]
+
+[[bin]]
+name = "overdrop-sebool"
+path = "src/main.rs"
+
+[dependencies]
+selinur = { git = "https://github.com/lucab/selinur-rs.git", branch = "master" }
+clap = "2.32"
+env_logger = "0.5"
+error-chain = { version = "0.12", default-features = false }            
+log = "0.4"
+serde = "1"
+serde_derive = "1"
+toml = "0.4"

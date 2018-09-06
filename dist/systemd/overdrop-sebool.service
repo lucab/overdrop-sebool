@@ -1,0 +1,14 @@
+[Unit]
+Description=Apply SELinux Booleans
+DefaultDependencies=no
+Conflicts=shutdown.target
+After=systemd-modules-load.service
+Before=sysinit.target shutdown.target
+ConditionPathIsReadWrite=/sys/fs/selinux/
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=RUST_LOG=trace
+ExecStart=/usr/libexec/overdrop/overdrop-sebool
+TimeoutSec=90s
