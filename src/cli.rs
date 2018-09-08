@@ -50,14 +50,9 @@ pub(crate) fn merge_cfg(
 pub(crate) fn accumulate_snippet(cur: SeboolCfg, snip: SeboolCfgSnippet) -> SeboolCfg {
     let mut res = cur;
     for (k, v) in snip.bools {
-        // This mimics an `Option<bool>`, not supported by TOML syntax.
-        if v == "" {
-            res.bools.remove(&k);
-            continue;
-        }
-
-        if let Ok(b) = v.parse() {
-            res.bools.insert(k, b);
+        match v.value {
+            None => res.bools.remove(&k),
+            Some(b) => res.bools.insert(k, b),
         };
     }
     res
@@ -83,5 +78,10 @@ pub(crate) struct SeboolCfg {
 #[derive(Deserialize)]
 pub(crate) struct SeboolCfgSnippet {
     #[serde(rename = "sebool")]
-    bools: collections::BTreeMap<String, String>,
+    bools: collections::BTreeMap<String, SeboolValue>,
+}
+
+#[derive(Deserialize)]
+pub(crate) struct SeboolValue {
+    value: Option<bool>,
 }
