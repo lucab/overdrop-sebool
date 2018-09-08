@@ -2,10 +2,10 @@
 
 [![Build Status](https://travis-ci.org/overdrop/overdrop-sebool.svg?branch=master)](https://travis-ci.org/overdrop/overdrop-sebool)
 
-A small Rust binary to apply SELinux booleans runtime values.
+A small Rust binary to manage SELinux booleans at runtime.
 
 It allows to tweak SELinux boolean values and persist changes across
-reboots, via plaintext configuration files. It is targeted toward
+reboots, via TOML configuration files. It is targeted toward
 early-boot configuration of an immutable OS, and aims at [decoupling
 configuration concerns](https://github.com/projectatomic/rpm-ostree/issues/27)
 regarding vendor-defaults, user-configuration and internal/runtime state.
@@ -23,7 +23,7 @@ This binary can be directly used as a systemd service to setup
 SELinux booleans at early-boot. A live-action demo of that is in
 the following asciinema recording:
 
-[![asciicast](https://asciinema.org/a/KNOHnpHlbULVQKnSrifcWqaJV.png)](https://asciinema.org/a/KNOHnpHlbULVQKnSrifcWqaJV)
+[![asciicast](https://asciinema.org/a/200268.png)](https://asciinema.org/a/200268)
 
 # Disclaimer
 
