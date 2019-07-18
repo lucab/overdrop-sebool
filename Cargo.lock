@@ -163,7 +163,7 @@ dependencies = [
  "log 0.4.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "selinur 0.0.1-dev (git+https://github.com/lucab/selinur-rs.git)",
  "serde 1.0.95 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde_derive 1.0.95 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde_derive 1.0.97 (registry+https://github.com/rust-lang/crates.io-index)",
  "toml 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -240,7 +240,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "serde_derive"
-version = "1.0.95"
+version = "1.0.97"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "proc-macro2 0.4.18 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -405,7 +405,7 @@ dependencies = [
 "checksum regex-syntax 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "747ba3b235651f6e2f67dfa8bcdcd073ddb7c243cb21c442fc12395dfcac212d"
 "checksum selinur 0.0.1-dev (git+https://github.com/lucab/selinur-rs.git)" = "<none>"
 "checksum serde 1.0.95 (registry+https://github.com/rust-lang/crates.io-index)" = "e47a9fd6b2d2d2330b19b0b3e5248a170a5acd6356fd88c7bb30362ef9c70567"
-"checksum serde_derive 1.0.95 (registry+https://github.com/rust-lang/crates.io-index)" = "5ea8eb91549d859275aef70c58bb30bd62ce50e5eb1a52d32b1b6886e02f7bce"
+"checksum serde_derive 1.0.97 (registry+https://github.com/rust-lang/crates.io-index)" = "c22a0820adfe2f257b098714323563dd06426502abbbce4f51b72ef544c5027f"
 "checksum strsim 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8ea5119cdb4c55b55d432abb513a0429384878c15dde60cc77b1c99de1a95a6a"
 "checksum syn 0.15.22 (registry+https://github.com/rust-lang/crates.io-index)" = "ae8b29eb5210bc5cf63ed6149cbf9adfc82ac0be023d8735c176ee74a2db4da7"
 "checksum termcolor 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)" = "ff3bac0e465b59f194e7037ed404b0326e56ff234d767edc4c5cc9cd49e7a2c7"
